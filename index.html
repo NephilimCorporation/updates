@@ -4,9 +4,29 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Nephilim Update Center - Find updates for every Nephilim application.</title>
         <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+
+	<script>
+		// Get the form and input element
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+
+// Add a submit event listener to the form
+searchForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Get the value entered in the input field
+    const searchTerm = searchInput.value.trim();
+
+    // Check if the entered search term is "NASH"
+    if (searchTerm.toLowerCase() === "nash") {
+        // Redirect to the "nash.html" page
+        window.location.href = "nash.html";
+    }
+});
+	</script>
     </head>
     <body>
         <div id="content" style="width: 1000px; height: 833px">
@@ -49,7 +69,7 @@
                     <div id="log_bot"></div>
 
                     <div id="search">
-                        <form method="get" action="">
+                        <form id="search-form" method="get" action="">
                             <fieldset>
                                 <font face="Trebuchet MS">
                                 <input type="text" name="s" id="search-text" size="15" /></font>
